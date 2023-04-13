@@ -1,0 +1,8 @@
+<div class="wrapper">
+    <h2>{{user.first_name}} {{user.last_name}}</h2>
+    <div class="wrapper-img">
+        <img class="avatar" src="{{user.avatar}}" alt="" id="{{user.id}}">
+    </div>
+    <h3>{{user.email}}</h3>
+    <button class="btn-delete" id="{{user.id}}" (click)="deleteUser($event)">delete</button>
+</div>

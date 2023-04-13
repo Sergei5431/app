@@ -1,0 +1,13 @@
+<h1>A list of users</h1>
+
+<div class="container">
+    <app-user 
+    *ngFor="let user of users; let i = index" 
+    [user]='user'
+    [users]='users'
+    [i]='i'
+    (click)="transition($event)"
+    ></app-user>
+</div>
+
+<app-unknowns></app-unknowns>

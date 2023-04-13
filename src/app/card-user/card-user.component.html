@@ -1,0 +1,35 @@
+<div class="wrapper-card">
+    <h1>Detailed user card</h1>
+    <h2>first name: {{first_name}}</h2>
+
+    <h2>last name: {{last_name}}</h2>
+
+    <img class="avatar" src="{{dataResponce.data.avatar}}" alt="" id="{{dataResponce.id}}">
+    <h3>mail: {{email}}</h3>
+    <h3>text: {{text}}</h3>
+    <a href="https://reqres.in/#support-heading">
+        <button class="btn">support</button></a>
+
+    <a routerLink="/users"><button class="btn">Go to users</button></a>
+
+    <button class="btn" (click)="update()">update</button>
+
+    <div class="update" *ngIf="hide">
+        <div class="update-window">
+            <h2 class="title">User editing</h2>
+            <form class="form">
+                <div class="form-group">
+                    <span>first-name:</span><input type="text" placeholder="first name" class="form-control"
+                        [(ngModel)]="first_name" name="first_name"><br>
+                    <span>last-name:</span><input type="text" placeholder="last name" class="form-control"
+                        [(ngModel)]="last_name" name="last_name"><br>
+                    <span>mail:</span><input type="text" placeholder="mail" class="form-control" [(ngModel)]="email"
+                        name="email"><br>
+                    <span>text:</span><input type="text" placeholder="text" class="form-control" [(ngModel)]="text"
+                        name="text"><br>
+                </div>
+            </form>
+            <button class="btn" (click)="push()">save</button>
+        </div>
+    </div>
+</div>
